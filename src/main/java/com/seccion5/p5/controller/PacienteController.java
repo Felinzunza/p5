@@ -17,7 +17,7 @@ public class PacienteController {
     @Autowired
     private PacienteService pacienteService;
 
-    public ResponseEntity<List<Paciente>>getPacientes(){
+    public ResponseEntity<List<Paciente>>getPacientes(){ //ResponseEntity me facilita generar mensajes como por ejemplo errores
         List<Paciente>pacientes = pacienteService.findAll();
 
         if(pacientes.isEmpty()){
